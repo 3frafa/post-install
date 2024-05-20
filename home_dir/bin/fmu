@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd "$(xdg-user-dir MUSIC)" || exit 1
+fd -calways -u | sort -V | fzf -e -m -q^ --ansi --cycle --no-sort --reverse \
+    --bind 'enter:execute-multi(clear;  mpv --no-audio-display                 {})' \
+    --bind 'ctrl-r:execute-multi(clear; mpv --no-audio-display --loop-playlist {})' \
+    --bind 'ctrl-s:execute-multi(clear; mpv --no-audio-display --shuffle       {})' \
+    --bind 'ctrl-a:deselect-all' \
+    --bind 'left:page-up,right:page-down'
+clear

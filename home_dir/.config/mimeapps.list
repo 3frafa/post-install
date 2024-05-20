@@ -1,0 +1,13 @@
+[Default Applications]
+application/pdf=firefox.desktop
+application/x-shellscript=nvim.desktop
+audio/flac=mpv.desktop
+audio/mpeg=mpv.desktop
+audio/vnd.wave=mpv.desktop
+audio/x-opus+ogg=mpv.desktop
+image/jpeg=org.xfce.ristretto.desktop
+image/png=org.xfce.ristretto.desktop
+inode/directory=thunar.desktop
+text/plain=nvim.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop

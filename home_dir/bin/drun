@@ -1,0 +1,14 @@
+#!/bin/sh
+
+bin=$(printf 'firefox
+btop
+gnome-disks
+keepassxc
+qbittorrent' | fzf -e -q^ --cycle --no-sort --reverse \
+    --bind 'left:page-up,right:page-down')
+[ -z "$bin" ] && exit 0
+
+case $bin in
+    btop)              "$bin";;
+       *) swaymsg exec "$bin";;
+esac

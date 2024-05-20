@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ $# -eq 0 ] || [ -d "$1" ]; then
+    (cd "$1" &&
+        for file in *.*; do
+            [ -f "$file" ] || continue
+
+            ffmpeg -i "$file" -ac 2 -ar 44100 -b:a 320k -joint_stereo 0 "${file%.*}.mp3"
+            [ "$?" -eq 255 ] && break
+        done)
+elif [ -f "$1" ]; then
+    ffmpeg -i "$1" -ac 2 -ar 44100 -b:a 320k -joint_stereo 0 "${1%.*}.mp3"
+fi

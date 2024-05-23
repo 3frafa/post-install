@@ -3,6 +3,7 @@
 pkgs=(
     arc-icon-theme
     arc-solid-gtk-theme
+    bash-completion
     bc
     brightnessctl
     btop

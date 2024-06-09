@@ -20,7 +20,7 @@ bindsym --no-repeat mod4+shift+a exec thunar "$(xdg-user-dir DOWNLOAD)"
 bindsym --no-repeat mod4+c       exec wl-copy -c & dunstify -t 2000 'Cleared.'
 
 bindsym --no-repeat shift+print  exec grim
-bindsym --no-repeat print        exec slurp | grim -g -
+bindsym --no-repeat print        exec grim -g "$(slurp)" - | wl-copy
 
 # bindings (2/3)
 

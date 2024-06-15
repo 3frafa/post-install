@@ -7,7 +7,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 bindsym --no-repeat mod4+q       kill
 bindsym --no-repeat mod4+return  exec $term
 bindsym --no-repeat mod4+d       exec $term drun
-bindsym --no-repeat mod4+w       exec $term iwctl
 bindsym --no-repeat mod4+x       exec $term nvim
 bindsym --no-repeat mod4+n       exec $term nvim ~/notes
 bindsym --no-repeat mod4+p       exec $term pulsemixer

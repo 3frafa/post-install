@@ -56,6 +56,8 @@ pkgs=(
     xdg-user-dirs
     xorg-xwayland
     yt-dlp
+    zathura-cb
+    zathura-pdf-mupdf
 )
 
 pkgs_aur=(

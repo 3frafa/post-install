@@ -7,7 +7,8 @@ btop
 gnome-disks
 keepassxc
 nwg-displays
-qbittorrent' | fzf -e -q^ --cycle --no-sort --reverse \
+qbittorrent
+telegram-desktop' | fzf -e -q^ --cycle --no-sort --reverse \
     --bind 'left:page-up,right:page-down')
 [ -z "$bin" ] && exit 0
 

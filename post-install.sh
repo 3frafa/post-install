@@ -46,6 +46,7 @@ pkgs=(
     sway
     swaybg
     swaylock
+    telegram-desktop
     thunar
     thunar-archive-plugin
     thunar-volman

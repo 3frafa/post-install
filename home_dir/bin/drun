@@ -1,0 +1,16 @@
+#!/bin/sh
+
+bin=$(printf 'firefox
+firefox --private-window
+audacity
+gnome-disks
+keepassxc
+nwg-displays
+qbittorrent' | fzf -e -q^ --cycle --no-sort --reverse \
+    --bind 'left:page-up,right:page-down')
+[ -z "$bin" ] && exit 0
+
+case $bin in
+    audacity) swaymsg exec 'GDK_BACKEND=x11 audacity';; # wayland bug
+           *) swaymsg exec "$bin";;
+esac

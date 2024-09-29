@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpv --profile=low-latency --untimed --wayland-disable-vsync=yes av://v4l2:/dev/video0

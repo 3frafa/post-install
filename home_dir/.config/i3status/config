@@ -1,0 +1,47 @@
+general {
+    colors = true
+    interval = 12
+}
+
+order += "volume master"
+order += "battery all"
+order += "wireless _first_"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "tztime local"
+
+battery all {
+    format = "BAT %percentage"
+    last_full_capacity = true
+    low_threshold = 40
+    threshold_type = "percentage"
+}
+
+cpu_usage {
+    format = "CPU %usage"
+    degraded_threshold = "25"
+    max_threshold = "75"
+}
+
+disk "/" {
+    format = "%avail"
+}
+
+memory {
+    format = "%used (%total)"
+}
+
+tztime local {
+    format = "%a %e %b %H:%M"
+}
+
+volume master {
+    format = "VOL %volume"
+    format_muted = "MUTED"
+}
+
+wireless _first_ {
+    format_up = "W: (%quality)"
+    format_down = "W: down"
+}

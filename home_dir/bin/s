@@ -1,0 +1,7 @@
+#!/bin/sh
+
+selection=$(fd -d4 -L -u | sort | fzf -e --cycle --no-sort --reverse \
+    --bind 'left:page-up,right:page-down')
+[ -z "$selection" ] && exit 0
+
+swaymsg exec "thunar '$selection'"
